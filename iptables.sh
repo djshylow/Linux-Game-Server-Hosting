@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#IIG IP TABLES Server
+#IP TABLES Block Ping Rqusest to Server
 
 iptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
